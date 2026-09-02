@@ -12,6 +12,7 @@
         var ctx = canvas.getContext("2d");
 
         var width = 1000;
+        var height = 1000;
         var x = 20;
         var y = 100;
         var raio = 20;
@@ -30,17 +31,12 @@
             ctx.arc(x, y, raio, 0, 2 * Math.PI);
             ctx.fillStyle = 'blue';
             ctx.fill();
-            if(x >= width){
-                var esquerda;
-                esquerda+=1;   
-            }
 
-            if (esquerda % 2 === 0){
-                var velocidade = -20;
-                
-            }
-            else {
-                var velocidade = +20;
+            if(x > width){
+                velocidade *= -1;  
+            } 
+            if(y > height){
+                velocidade *= -1;
             }
             
             x += velocidade * decorrido/100;

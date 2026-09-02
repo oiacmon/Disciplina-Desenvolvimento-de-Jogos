@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Restore</title>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext("2d");
+
+            const image1 = new Image();
+
+            image1.src = 'img/explosao.png';
+
+
+            for (i=1;i<3;i++){
+                image1.onload = function() {
+                
+                    ctx.drawImage(image1,
+                        10, 10, 60, 65,
+                        100, 120, 60, 65);
+
+                    ctx.save();
+                    
+                    ctx.drawImage(image1,
+                        80, 10, 60, 65,
+                        180, 120, 60, 65);
+
+                    ctx.restore();
+
+                }
+        }
+
+            
+
+
+
+
+    </script>
+    
+</body>
+</html>

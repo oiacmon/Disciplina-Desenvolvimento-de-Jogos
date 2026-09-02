@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="application/javascript">
+      function triangulo(x,y) {
+        var canvas = document.getElementById("arcos");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            
+            ctx.beginPath();
+            ctx.moveTo(x,y)
+            ctx.lineTo(x+50,y+50)
+            ctx.lineTo(x-50,y+50)
+            ctx.arc(x, y+100, 100, 90*Math.PI/180, 270*Math.PI/180, false);
+
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "orange";
+
+            ctx.stroke();
+        }
+      }
+    </script>
+</head>
+<body onload="triangulo(200,200), triangulo(300,300)">
+    <div>
+        <canvas id="arcos" width= 1000 height=1000></canvas>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="600"></canvas>
+    <script>
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext("2d");
+
+            const image1 = new Image();
+
+            image1.src = 'img/explosao.png';
+
+            image1.onload = function() {
+
+                var x1 = 10;
+                var x2 = 100;
+                for(var i=0; i<5; i++) {
+                    ctx.drawImage(image1,
+                     x1, 10, 60, 65,
+                     x2, 120, 60, 65);
+                    x1 += 70;
+                    x2 += 70;
+                }
+
+        }
+    
+
+    </script>
+</body>
+</html>

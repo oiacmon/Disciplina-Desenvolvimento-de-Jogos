@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="600"></canvas>
+    <script>
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext("2d");
+
+            const image1 = new Image();
+            const image2 = new Image();
+            const image3 = new Image();
+            const image4 = new Image();
+            const image5 = new Image();
+
+            image1.src = 'img/explosao.png';
+            image2.src = 'img/explosao.png';
+            image3.src = 'img/explosao.png';
+            image4.src = 'img/explosao.png';
+            image5.src = 'img/explosao.png';
+
+            image1.onload = function() {
+
+                    ctx.drawImage(image1,
+                     10, 10, 60, 65,
+                     100, 120, 60, 65);
+                
+            }
+            image2.onload = function() {
+
+                ctx.drawImage(image2,
+                    80, 10, 60, 65,
+                    170, 120, 60, 65);
+                
+        }
+            image3.onload = function() {
+
+                        ctx.drawImage(image3,
+                        150, 10, 60, 65,
+                        240, 120, 60, 65);
+                    
+            }
+            image4.onload = function() {
+
+                        ctx.drawImage(image4,
+                        220, 10, 60, 65,
+                        310, 120, 60, 65);
+                    
+            }
+            image5.onload = function() {
+
+                        ctx.drawImage(image5,
+                        290, 10, 60, 65,
+                        380, 120, 60, 65);
+                    
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("linhas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+
+          ctx.beginPath();
+
+          ctx.moveTo(100,100);
+          ctx.lineTo(200,100);
+          ctx.lineTo(250,150);
+          ctx.lineTo(200,200);
+          ctx.lineTo(100,200);
+          ctx.lineTo(50,150);
+          ctx.lineTo(100,100);
+    
+
+
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = "green";
+
+          ctx.stroke();
+        }
+      }
+    </script>
+</head>
+<body onload="draw();">
+    <div dis>
+        <canvas id="linhas" width= 1000 height=1000></canvas>
+    </div>
+  </body>
+</html>
