@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimento</title>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="1000"> </canvas>
+    <script lang="javascript">
+        const canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext("2d");
+
+        const imagens = [];
+        for (let i = 1; i <= 36; i++) {
+            const img = new Image();
+            imagens.push(img); // adiciona a imagem no array
+        }
+
+        imagens.forEach((img, index) => {
+        img.src = `DesenvolvimentodeJogos/img\aranha_terror.png${index + 1}.png`; // substituir pelo caminho real
+        img.alt = `Imagem ${index + 1}`;
+        });
+
+        console.log(imagens[0]);
+
+    </script>
+    
+</body>
+</html>
