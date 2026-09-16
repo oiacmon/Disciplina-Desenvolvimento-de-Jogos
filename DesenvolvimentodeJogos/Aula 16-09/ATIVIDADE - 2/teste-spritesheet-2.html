@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Personagem controlável e animado</title>
+   <script src="spritesheet.js"></script> 
+   <script src="animacao.js"></script> 
+   <script src="teclado.js"></script> 
+   <script src="Homem.js"></script>
+</head>
+
+<body>
+   <canvas id="canvas_Homem" width="1000" height="700"></canvas>
+   <script>
+      var canvas = document.getElementById('canvas_Homem');
+      var context = canvas.getContext('2d');
+
+      var teclado = new Teclado(document); 
+      var animacao = new Animacao(context); 
+
+      var imgHomem = new Image(); 
+      imgHomem.src = 'homem.png'; 
+
+      var Homem = new Homem(context, teclado, imgHomem);
+      Homem.x = 0; 
+      Homem.y = 200; 
+      animacao.novoSprite(Homem);
+
+      imgHomem.onload = function() {
+         animacao.ligar();
+      }
+   </script>
+</body>
+
+</html>
+
+
+
