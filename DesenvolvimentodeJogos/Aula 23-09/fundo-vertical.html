@@ -36,9 +36,9 @@
          var context = canvas.getContext('2d');
          
          // Passo o context e a imagem para os objetos Fundo
-         var fundoEspaco = new Fundo(context, imgEspaco, vertical);
-         var fundoEstrelas = new Fundo(context, imgEstrelas, vertical);
-         var fundoNuvens = new Fundo(context, imgNuvens, vertical);
+         var fundoEspaco = new Fundo(context, imgEspaco, VERTICAL);
+         var fundoEstrelas = new Fundo(context, imgEstrelas, VERTICAL);
+         var fundoNuvens = new Fundo(context, imgNuvens, VERTICAL);
 
          // Cada um a uma velocidade diferente
          fundoEspaco.velocidade = 3;
