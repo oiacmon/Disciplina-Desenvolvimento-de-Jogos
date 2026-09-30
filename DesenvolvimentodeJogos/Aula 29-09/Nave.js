@@ -26,9 +26,20 @@ Nave.prototype = {
       this.context.drawImage(this.imagem, this.x, this.y, 
             this.imagem.width, this.imagem.height);
    },
-   atirar: function() {
-        var doble = true;
-      var t = new Tiro(this.context, this, doble);
-      this.animacao.novoSprite(t);
-   }
+atirar: function() {
+    let largura = this.imagem.width;
+
+    // Posição das asas
+    let xEsquerda = this.x + 10;
+    let xDireita  = this.x + largura - 10;
+
+    // Criar dois tiros
+    let tiroEsq = new Tiro(this.context, this, xEsquerda);
+    let tiroDir = new Tiro(this.context, this, xDireita);
+
+    // Adicionar na animação
+    this.animacao.novoSprite(tiroEsq);
+    this.animacao.novoSprite(tiroDir);
+}
+
 }
